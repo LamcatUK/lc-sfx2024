@@ -1,0 +1,212 @@
+@import "typography";
+@import "colours";
+@import "header";
+@import "footer";
+@import "buttons";
+@import "blog";
+@import "single-fighter";
+@import "panels";
+@import "event";
+@import "blocks/blocks";
+
+a,
+a.noline {
+    text-decoration: none;
+}
+a.anchor {
+    display: block;
+    position: relative;
+    top: calc( var(--h-top) * -1);
+    visibility: hidden;
+}
+
+@media (min-width:992px) {
+    .cols-lg-2 {
+        columns: 2;
+    }
+    .cols-lg-3 {
+        columns: 3;
+    }
+}
+.share-icons {
+    padding-top: 1rem;
+    a:not(:last-of-type) {
+        margin-right: 0.5rem;
+    }
+}
+
+ul:not([class]) {
+    list-style: none; /* Remove default bullets */
+    li::before {
+        content: "\f138";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        font-family: "Font Awesome 6 Free";
+        color: var(--col-primary); /* Change the color */
+        font-weight: 600; /* If you want it to be bold */
+        font-size: var(--fs-200);
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 1.5rem; /* Also needed for space (tweak if needed) */
+        margin-left: -1.5rem; /* Also needed for space (tweak if needed) */
+    }
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.fa-ul {
+    margin-inline-start: 1.5rem;
+}
+
+
+main {
+    // background-color: var(--col-primary-100);
+    background-color: var(--col-grey);
+    margin-top: var(--h-top);
+//     // scroll-snap-type: block proximity;
+//     // scroll-padding-top: 15vh;
+}
+
+.container-xl .container-xl {
+    padding-inline: 0;
+}
+
+.reading {
+    font-size: 0.889rem;
+    font-style: italic;
+}
+
+.form-control {
+    padding: 0.55rem 0.75rem !important;
+}
+
+section {
+    position: relative;
+}
+
+
+
+.grid-span-2 {
+    grid-column: span 2;
+}
+.grid-span-3 {
+    grid-column: span 3;
+}
+
+.nav__link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    span {
+        cursor: pointer;
+        i {
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+        }
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-15px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+}
+
+
+
+#breadcrumbs {
+    font-family: var(--ff-headlines);
+    font-weight: var(--fw-900);
+    color: var(--col-primary-900);
+    a {
+        color: var(--col-primary-900);
+        &:hover {
+            color: var(--col-primary-400);
+        }
+    }
+    .breadcrumb_last {
+        color: var(--col-primary-400);
+    }
+}
+
+
+.wpcf7-list-item-label {
+    cursor: pointer;
+    a {
+        color: var(--col-highlight-400);
+    }
+}
+.wpcf7-not-valid-tip {
+    background-color: var(--col-highlight-400);
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0;
+}
+
+.wpcf7 input[type="email"],
+.wpcf7 input[type="text"],
+.wpcf7 textarea {
+    border-radius: 0;
+}
+
+.wpcf7 input[type="submit"] {
+    @extend .button;
+    display: block;
+    width: 100%;
+    background-color: var(--col-highlight-400);
+    border-color: var(--col-highlight-400);
+    color: var(--col-primary);
+    border-radius: 0;
+    font-weight: var(--fw-600);
+    &:disabled {
+        color: white;
+    }
+    &:hover {
+        color: var(--col-primary);
+        background-color: var(--col-highlight-400);
+    }
+}
+
+.wpcf7-list-item label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    input[type="checkbox"] {
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+        accent-color: var(--col-primary) !important;
+    }
+}
+
+.wpcf7 select {
+    border-radius: 0;
+}
+
+// show stuff that overflows horizontally
+// * {
+//     outline: 1px solid #f00 !important;
+// }
+// show stuff that overflows horizontally via console JS
+/*
+var all = document.getElementsByTagName("*"), i = 0, rect, docWidth = document.documentElement.offsetWidth;
+for (; i < all.length; i++) {
+    rect = all[i].getBoundingClientRect();
+    if (rect.right > docWidth || rect.left < 0){
+        console.log(all[i]);
+        all[i].style.borderTop = '1px solid red';
+    }
+}
+*/
+
+// @mixin fluid-type($min-vw, $max-vw, $min-value, $max-value) {
+// 	$factor: 1 / ($max-vw - $min-vw) * ($max-value - $min-value);
+// 	$calc-value: unquote('#{ $min-value - ($min-vw * $factor) } + #{ 100vw * $factor }');
+
+// 	font-size: $min-value; // Fallback for older browsers
+// 	font-size: clamp(#{if($min-value > $max-value, $max-value, $min-value)}, #{$calc-value}, #{if($min-value > $max-value, $min-value, $max-value)});
+// }

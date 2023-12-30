@@ -1,0 +1,37 @@
+#wrapper-navbar {
+
+    background-color: var(--col-primary-900);
+    background-image: var(--bg-grad-1);
+    box-shadow: var(--shadow-1);
+
+    transition: transform 0.3s ease-in-out;
+
+    border-bottom: 2px solid var(--col-highlight);
+
+    &.hide {
+        transform: translateY(-140px);
+    }
+
+    .logo-container {
+        background-image: url(../img/sfx-logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        aspect-ratio: 5 / 2;
+        width: 200px;
+    }
+
+    a {
+        font-family: var(--ff-headlines);
+        font-weight: var(--fw-900);
+        color: var(--col-light);
+        padding: 0;
+        transition: color var(--transition);
+        &:hover {
+            color: var(--col-primary-200);
+        }
+    }
+    .current_page_item a {
+        color: var(--col-highlight);
+    }
+}

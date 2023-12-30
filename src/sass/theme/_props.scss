@@ -1,0 +1,62 @@
+$col-primary: #0f093e;
+$col-secondary: #251698;
+$col-highlight: #80ff00;
+
+:root {
+
+    --hsl-primary-100: 249 17% 92%;
+    --hsl-primary-200: 247 74% 84%;
+    --hsl-primary-400: 247 74% 34%;
+    --hsl-primary-900: 247 74% 14%;
+    --hsl-highlight-400: 90 100% 50%;
+
+    --col-primary-100: hsl( var(--hsl-primary-100) );
+    --col-primary-200: hsl( var(--hsl-primary-200) );
+    --col-primary-400: hsl( var(--hsl-primary-400) );
+    --col-primary-900: hsl( var(--hsl-primary-900) );
+    --col-highlight-400: hsl( var(--hsl-highlight-400) );
+    
+    --col-primary: var(--col-primary-900);
+    --col-highlight: var(--col-highlight-400);
+
+    --col-dark: #0e0e0e;
+    --col-light: #fafafa;
+    --col-grey: #f0f0f0;
+
+    --bg-grad-1: linear-gradient(150deg, var(--col-primary-900) 50%, var(--col-dark));
+
+    --h-top: 100px;
+
+    --fs-100: clamp(0.64rem, calc(0.66rem + -0.02vw), 0.65rem);
+    --fs-200: clamp(0.80rem, calc(0.77rem + 0.17vw), 0.90rem);
+    --fs-300: clamp(0.90rem, calc(0.9rem + 0.17vw), 0.95rem);
+    --fs-400: clamp(1.00rem, calc(0.96rem + 0.22vw), 1.13rem);
+    --fs-450: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --fs-500: clamp(1.25rem, calc(1.20rem + 0.27vw), 1.41rem);
+    --fs-600: clamp(1.56rem, calc(1.49rem + 0.34vw), 1.76rem);
+    --fs-700: clamp(1.95rem, calc(1.87rem + 0.42vw), 2.20rem);
+    --fs-800: clamp(2.44rem, calc(2.33rem + 0.53vw), 2.75rem);
+    --fs-900: clamp(3.05rem, calc(2.92rem + 0.66vw), 3.43rem);
+
+    // --fs-200: 0.813rem;
+    // --fs-400: 1rem;
+    // --fs-600: 1.4rem;
+    // --fs-700: 1.8rem;
+    // --fs-800: 2.2rem;
+    // --fs-900: calc(52px + (72 - 52) * ((100vw - 300px) / (1200 - 300)));
+
+    --fw-400: 300;
+    --fw-600: 400;
+    --fw-900: 700;
+
+    --ff-body: 'URW DIN', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --ff-headings: 'URW DIN', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --ff-headlines: "Poster Gothic ExCond", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    --transition: 250ms ease-out;
+
+    --shadow-1: rgba(0,0,0,.12) 0 1px 3px, rgba(0,0,0,.24) 0 1px 2px;
+    --filter-shadow-1: drop-shadow(0 1px 3px rgba(0,0,0,.12)) drop-shadow(0 1px 2px rgba(0,0,0,.24));
+
+}

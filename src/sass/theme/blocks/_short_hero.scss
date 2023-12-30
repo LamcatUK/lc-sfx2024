@@ -1,0 +1,14 @@
+.short_hero {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1 {
+        font-family: var(--ff-headlines);
+        font-size: var(--fs-900);
+        color: var(--col-light);
+        span {
+            color: var(--col-highlight);
+        }
+    }
+}

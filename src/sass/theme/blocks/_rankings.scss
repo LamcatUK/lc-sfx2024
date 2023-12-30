@@ -1,0 +1,28 @@
+.rankings {
+
+    .filterButtons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: max-content;
+        width: 100%;
+        gap: 1rem;
+        border-top: 2px solid var(--col-primary-900);
+        border-bottom: 2px solid var(--col-primary-900);
+
+        .showAllButton,
+        .filterButton {
+            border: 0;
+            background-color: transparent;
+            font-family: var(--ff-headlines);
+            font-weight: var(--fw-900);
+            font-size: var(--fs-400);
+            color: var(--bs-gray-600);
+        }
+        .is-checked {
+            background-color: var(--col-primary-900);
+            color: var(--col-highlight);
+        }
+
+    }
+}

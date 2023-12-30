@@ -1,0 +1,175 @@
+.fighter {
+    // background-color: var(--col-primary-100);
+
+    .follow {
+        h3 {
+            font-family: var(--ff-headlines);
+            color: var(--col-primary-900);
+            font-size: var(--fs-500);
+            display: inline;
+            margin-bottom: 0;
+            margin-inline-end: 1rem;
+        }
+        a {
+            color: var(--col-primary-900);
+            font-size: var(--fs-500);
+            &:hover {
+                color: var(--col-primary-400);
+            }
+        }
+    }
+
+    &__title {
+        font-family: var(--ff-headlines);
+        font-size: var(--fs-800);
+        font-weight: var(--fw-900);
+        color: var(--col-highlight-400);
+        margin-bottom: 0;
+    }
+    &__nickname {
+        font-family: var(--ff-headlines);
+        font-size: var(--fs-700);
+        font-weight: var(--fw-500);
+        color: var(--col-light);
+    }
+}
+    
+@keyframes chart {
+    0% { width: 0; }
+    100% { width: var(--value); }
+}
+.profile_card {
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 8rem 1fr;
+    grid-template-areas: "image header" "image stats";
+    background-color: var(--col-primary-900);
+    background-image: var(--bg-grad-1);
+    &__image {
+        grid-area: image;
+        aspect-ratio: 3 / 4;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    &__header {
+        grid-area: header;
+        padding: 1rem 1.5rem 0.5rem 1.5rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    &__country {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        .country {
+            color: var(--col-highlight);
+            font-family: var(--ff-headlines);
+            font-weight: var(--fw-900);
+        }
+        .city {
+            color: var(--col-light);
+            font-family: var(--ff-headlines);
+            font-weight: var(--fw-600);
+        }
+        .flag {
+
+        }
+    }
+    &__stats {
+        grid-area: stats;
+        color: var(--col-light);
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding-bottom: 1rem;
+        font-size: var(--fs-300);
+    }
+    &__details {
+        border-right: 2px solid var(--col-highlight);
+        padding-inline: 1.5rem;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+    }
+    &__record {
+        padding-inline: 1rem 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    .wins,
+    .losses,
+    .draws {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.5rem;
+        font-size: var(--fs-400);
+        margin-bottom: 0.5rem;
+        div {
+            padding-inline: 0.5rem;
+            font-weight: var(--fw-600);
+        }
+        div:first-of-type {
+            font-family: var(--ff-headlines);
+            font-weight: var(--fw-900);
+            display: flex;
+            align-items: center;
+            line-height: 1;
+        }
+    }
+    .wins {
+        border: 2px solid green;
+        div:first-of-type {
+            background-color: green;
+        }
+    }
+    .losses {
+        border: 2px solid firebrick;
+        div:first-of-type {
+            background-color: firebrick;
+        }
+    }
+    .draws {
+        border: 2px solid orange;
+        width: 50%;
+        margin-inline: auto;
+        div:first-of-type {
+            background-color: orange;
+        }
+    }
+
+    .result {
+        margin-bottom: 0.5rem;
+    }
+
+    .graph {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        font-size: var(--fs-100);
+        column-gap: 0.5rem;
+        row-gap: 1rem;
+    }
+    .chart {
+        border: 2px solid var(--col-highlight);
+        position: relative;
+        isolation: isolate;
+        .bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background-color: var(--col-highlight);
+            z-index: -1;
+            animation: chart 1s forwards ease;
+            animation-delay: 500ms;
+        }
+        .val {
+            font-size: 10px;
+            font-weight: var(--fw-600);
+            color: var(--col-dark);
+        }
+    }
+
+}
+

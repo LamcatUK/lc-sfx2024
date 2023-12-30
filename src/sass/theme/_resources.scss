@@ -1,0 +1,12 @@
+.index_hero {
+    min-height: 400px;
+    display: grid;
+    place-content: center;
+    * {
+        text-align: center;
+    }
+    .container-xl > div {
+        max-width: 60ch;
+        margin: auto;
+    }
+}
